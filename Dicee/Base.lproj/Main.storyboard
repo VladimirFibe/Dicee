@@ -20,38 +20,46 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="GreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="6Ij-1o-5XO">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="Vsv-fZ-7Ag">
-                                <rect key="frame" x="55" y="393" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="DiceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Tpw-aO-hdc">
-                                <rect key="frame" x="106" y="154" width="196" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erH-Ya-LEA">
-                                <rect key="frame" x="150" y="643" width="94" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.60784906149999995" green="0.10977255549999999" blue="0.1215795502" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Roll">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="40"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sta-ZA-9vP"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="12j-jI-Hfg">
-                                <rect key="frame" x="232" y="388" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="cpK-LE-eBT">
+                                <rect key="frame" x="78.5" y="174" width="257" height="548"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="DiceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Tpw-aO-hdc">
+                                        <rect key="frame" x="30.5" y="0.0" width="196" height="128"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="o7K-bc-eMs">
+                                        <rect key="frame" x="0.0" y="258" width="257" height="100"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="Vsv-fZ-7Ag">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="12j-jI-Hfg">
+                                                <rect key="frame" x="157" y="0.0" width="100" height="100"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erH-Ya-LEA">
+                                        <rect key="frame" x="93.5" y="488" width="70" height="60"/>
+                                        <color key="backgroundColor" red="0.60784906149999995" green="0.10977255549999999" blue="0.1215795502" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Roll">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sta-ZA-9vP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Ij-1o-5XO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Kei-Mi-Htf"/>
                             <constraint firstAttribute="trailing" secondItem="6Ij-1o-5XO" secondAttribute="trailing" id="MSF-4o-maP"/>
+                            <constraint firstItem="cpK-LE-eBT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SGT-NY-LSs"/>
                             <constraint firstAttribute="bottom" secondItem="6Ij-1o-5XO" secondAttribute="bottom" id="cnG-l0-92F"/>
+                            <constraint firstItem="cpK-LE-eBT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o1b-Ah-ZWv"/>
                             <constraint firstItem="6Ij-1o-5XO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="z4G-aD-xzl"/>
                         </constraints>
                     </view>
