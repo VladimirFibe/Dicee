@@ -29,11 +29,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erH-Ya-LEA">
-                                <rect key="frame" x="122" y="643" width="149" height="62"/>
+                                <rect key="frame" x="150" y="643" width="94" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.60784906149999995" green="0.10977255549999999" blue="0.1215795502" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                <buttonConfiguration key="configuration" style="plain" title="Roll">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="40"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -52,6 +52,10 @@
                             <constraint firstItem="6Ij-1o-5XO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="z4G-aD-xzl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="diceImageView1" destination="Vsv-fZ-7Ag" id="crw-Bd-BcA"/>
+                        <outlet property="diceImageView2" destination="12j-jI-Hfg" id="HED-Be-Qv3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
