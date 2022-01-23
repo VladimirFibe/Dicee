@@ -37,6 +37,9 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="40"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sta-ZA-9vP"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="12j-jI-Hfg">
                                 <rect key="frame" x="232" y="388" width="120" height="120"/>
