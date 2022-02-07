@@ -17,34 +17,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="rtQ-Pl-oNB">
-                                <rect key="frame" x="-30" y="0.0" width="474" height="896"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="AppBreweryLogo" translatesAutoresizingMaskIntoConstraints="NO" id="8d0-vl-6TF">
-                                <rect key="frame" x="30" y="389" width="354" height="118"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="GreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="heh-1i-TpM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="8d0-vl-6TF" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="AU4-Yt-F7Y"/>
-                            <constraint firstItem="rtQ-Pl-oNB" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="PhD-yE-dcP"/>
-                            <constraint firstAttribute="bottom" secondItem="rtQ-Pl-oNB" secondAttribute="bottom" id="QKX-Ax-zWH"/>
-                            <constraint firstAttribute="trailing" secondItem="rtQ-Pl-oNB" secondAttribute="trailing" constant="-30" id="p9e-od-aJ6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8d0-vl-6TF" secondAttribute="trailing" constant="30" id="rz3-sc-Kzc"/>
-                            <constraint firstItem="rtQ-Pl-oNB" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="-30" id="vNX-PC-u2N"/>
-                            <constraint firstItem="8d0-vl-6TF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="xkJ-Tg-KEQ"/>
+                            <constraint firstAttribute="trailing" secondItem="heh-1i-TpM" secondAttribute="trailing" id="hgS-re-3yL"/>
+                            <constraint firstAttribute="bottom" secondItem="heh-1i-TpM" secondAttribute="bottom" id="kl3-fh-NPM"/>
+                            <constraint firstItem="heh-1i-TpM" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="lPY-RX-IAE"/>
+                            <constraint firstItem="heh-1i-TpM" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="zyM-Nt-J7A"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="59" y="172"/>
+            <point key="canvasLocation" x="57.971014492753625" y="171.42857142857142"/>
         </scene>
     </scenes>
     <resources>
-        <image name="AppBreweryLogo" width="380" height="118"/>
-        <image name="background" width="596" height="842"/>
+        <image name="GreenBackground" width="444.5" height="414"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

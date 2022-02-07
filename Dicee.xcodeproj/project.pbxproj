@@ -9,11 +9,9 @@
 /* Begin PBXBuildFile section */
 		1F27FDA1279D8EBD0063099E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F27FDA0279D8EBD0063099E /* AppDelegate.swift */; };
 		1F27FDA3279D8EBD0063099E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F27FDA2279D8EBD0063099E /* SceneDelegate.swift */; };
-		1F27FDA5279D8EBD0063099E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F27FDA4279D8EBD0063099E /* ViewController.swift */; };
 		1F27FDA8279D8EBD0063099E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F27FDA6279D8EBD0063099E /* Main.storyboard */; };
 		1F27FDAA279D8EBE0063099E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F27FDA9279D8EBE0063099E /* Assets.xcassets */; };
 		1F27FDAD279D8EBE0063099E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F27FDAB279D8EBE0063099E /* LaunchScreen.storyboard */; };
-		1F27FDB5279DB4580063099E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F27FDB4279DB4580063099E /* HomeView.swift */; };
 		1F57A31627AD68D100E6617C /* DiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F57A31527AD68D100E6617C /* DiceController.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +19,10 @@
 		1F27FD9D279D8EBD0063099E /* Dicee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dicee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F27FDA0279D8EBD0063099E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F27FDA2279D8EBD0063099E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1F27FDA4279D8EBD0063099E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1F27FDA7279D8EBD0063099E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F27FDA9279D8EBE0063099E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F27FDAC279D8EBE0063099E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F27FDAE279D8EBE0063099E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1F27FDB4279DB4580063099E /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1F57A31527AD68D100E6617C /* DiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,12 +59,10 @@
 				1F27FDA0279D8EBD0063099E /* AppDelegate.swift */,
 				1F27FDA2279D8EBD0063099E /* SceneDelegate.swift */,
 				1F57A31527AD68D100E6617C /* DiceController.swift */,
-				1F27FDA4279D8EBD0063099E /* ViewController.swift */,
 				1F27FDA6279D8EBD0063099E /* Main.storyboard */,
 				1F27FDA9279D8EBE0063099E /* Assets.xcassets */,
 				1F27FDAB279D8EBE0063099E /* LaunchScreen.storyboard */,
 				1F27FDAE279D8EBE0063099E /* Info.plist */,
-				1F27FDB4279DB4580063099E /* HomeView.swift */,
 			);
 			path = Dicee;
 			sourceTree = "<group>";
@@ -144,8 +138,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F27FDA5279D8EBD0063099E /* ViewController.swift in Sources */,
-				1F27FDB5279DB4580063099E /* HomeView.swift in Sources */,
 				1F27FDA1279D8EBD0063099E /* AppDelegate.swift in Sources */,
 				1F57A31627AD68D100E6617C /* DiceController.swift in Sources */,
 				1F27FDA3279D8EBD0063099E /* SceneDelegate.swift in Sources */,
@@ -296,7 +288,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Dicee/Info.plist;
@@ -310,7 +302,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ilines.nsu.Dicee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -325,7 +317,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Dicee/Info.plist;
@@ -339,7 +331,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ilines.nsu.Dicee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -15,24 +15,22 @@ class DiceController: UIViewController {
     image.contentMode = .scaleAspectFill
     return image
   }()
-  let logoImageView: UIImageView = {
-    let image = UIImageView(image: UIImage(named: "DiceeLogo"))
-    return image
-  }()
+
   let diceImageView1: UIImageView = {
     let image = UIImageView(image: UIImage(named: "DiceOne"))
     return image
   }()
+  
   let diceImageView2: UIImageView = {
     let image = UIImageView(image: UIImage(named: "DiceOne"))
     return image
   }()
+  
   let rollButton: UIButton = {
     let button = UIButton(type: .system)
     button.setTitle("Roll", for: .normal)
-    button.setTitleColor(.white, for: .normal)
     button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
-    button.backgroundColor = #colorLiteral(red: 0.6078431373, green: 0.1098039216, blue: 0.1215686275, alpha: 1)
+    button.backgroundColor = #colorLiteral(red: 0.6078431373, green: 0.1098039216, blue: 0.1215686275, alpha: 1) // 9B1C1F
     button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 40, bottom: 10, right: 40)
     button.layer.cornerRadius = 20
     button.addTarget(self, action: #selector(rollButtonPressed), for: .touchUpInside)
@@ -48,30 +46,30 @@ class DiceController: UIViewController {
     //WHO          WHAT    VALUE
     diceImageView1.image = #imageLiteral(resourceName: "DiceSix")
   }
+  
   @objc func rollButtonPressed() {
     diceImageView1.image = dices.randomElement()
     diceImageView2.image = dices[Int.random(in: 0...5)]
   }
+  
   override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
     if motion == .motionShake {
       rollButtonPressed()
     }
   }
+  
   func setupUI() {
-    view.backgroundColor = .white
     view.addSubview(greenView)
-    view.addSubview(logoImageView)
     view.addSubview(diceImageView1)
     view.addSubview(diceImageView2)
     view.addSubview(rollButton)
-    
     let diceStack = UIStackView(arrangedSubviews: [diceImageView1, diceImageView2])
     diceStack.axis = .horizontal
     diceStack.alignment = .fill
     diceStack.distribution = .fill
     diceStack.spacing = 60
     
-    let stack = UIStackView(arrangedSubviews: [logoImageView, diceStack, rollButton])
+    let stack = UIStackView(arrangedSubviews: [diceStack, rollButton])
     stack.axis = .vertical
     stack.alignment = .center
     stack.distribution = .fill
