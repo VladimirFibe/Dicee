@@ -27,7 +27,6 @@ class DiceController: UIViewController {
     button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 40, bottom: 10, right: 40)
     button.layer.cornerRadius = 20
     button.addTarget(nil, action: #selector(rollButtonPressed), for: .touchUpInside)
-
     return button
   }()
   
@@ -53,31 +52,27 @@ class DiceController: UIViewController {
   
   func setupUI() {
     view.addSubview(greenView)
-    view.addSubview(diceImageView1)
-    view.addSubview(diceImageView2)
-    view.addSubview(rollButton)
-    let diceStack = UIStackView(arrangedSubviews: [diceImageView1, diceImageView2])
-    diceStack.axis = .horizontal
-    diceStack.alignment = .fill
-    diceStack.distribution = .fill
-    diceStack.spacing = 60
-    
-    let stack = UIStackView(arrangedSubviews: [diceStack, rollButton])
-    stack.axis = .vertical
-    stack.alignment = .center
-    stack.distribution = .fill
-    stack.spacing = 80
-    
-    view.addSubview(stack)
-    stack.translatesAutoresizingMaskIntoConstraints = false
-    stack.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-    stack.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-    
     greenView.translatesAutoresizingMaskIntoConstraints = false
     greenView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
     greenView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     greenView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
     greenView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+
+    let diceStack = UIStackView(arrangedSubviews: [diceImageView1, diceImageView2])
+    diceStack.axis = .horizontal
+    diceStack.alignment = .fill
+    diceStack.distribution = .fill
+    diceStack.spacing = 50
+    
+    let stack = UIStackView(arrangedSubviews: [diceStack, rollButton])
+    stack.axis = .vertical
+    stack.alignment = .center
+    stack.distribution = .fill
+    stack.spacing = 70
+    view.addSubview(stack)
+    stack.translatesAutoresizingMaskIntoConstraints = false
+    stack.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    stack.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
   }
 }
 
