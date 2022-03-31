@@ -5,8 +5,7 @@
 //  Created by Vladimir Fibe on 04.02.2022.
 //
 
-import Foundation
-import UIKit
+import SwiftUI
 
 class DiceController: UIViewController {
   
@@ -16,15 +15,9 @@ class DiceController: UIViewController {
     return image
   }()
 
-  let diceImageView1: UIImageView = {
-    let image = UIImageView(image: UIImage(named: "DiceOne"))
-    return image
-  }()
+  let diceImageView1 = UIImageView(image: #imageLiteral(resourceName: "DiceOne"))
   
-  let diceImageView2: UIImageView = {
-    let image = UIImageView(image: UIImage(named: "DiceOne"))
-    return image
-  }()
+  let diceImageView2 = UIImageView(image: #imageLiteral(resourceName: "DiceOne"))
   
   let rollButton: UIButton = {
     let button = UIButton(type: .system)
@@ -33,7 +26,7 @@ class DiceController: UIViewController {
     button.backgroundColor = #colorLiteral(red: 0.6078431373, green: 0.1098039216, blue: 0.1215686275, alpha: 1) // 9B1C1F
     button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 40, bottom: 10, right: 40)
     button.layer.cornerRadius = 20
-    button.addTarget(self, action: #selector(rollButtonPressed), for: .touchUpInside)
+    button.addTarget(nil, action: #selector(rollButtonPressed), for: .touchUpInside)
 
     return button
   }()
@@ -86,5 +79,24 @@ class DiceController: UIViewController {
     greenView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
     greenView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
   }
+}
 
+struct SwiftUIController: UIViewControllerRepresentable {
+  typealias UIViewControllerType = DiceController
+  
+  func makeUIViewController(context: Context) -> UIViewControllerType {
+    let viewController = UIViewControllerType()
+    return viewController
+  }
+  
+  func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+    
+  }
+}
+
+struct SwiftUIController_Previews: PreviewProvider {
+  static var previews: some View {
+    SwiftUIController()
+      .edgesIgnoringSafeArea(.all)
+  }
 }
