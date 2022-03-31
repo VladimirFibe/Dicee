@@ -30,9 +30,9 @@ class DiceController: UIViewController {
 
     return button
   }()
+  
   let dices = [#imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix")]
-  var leftDiceNumber = 1
-  var rightDiceNumber = 4
+
   override func viewDidLoad() {
     super.viewDidLoad()
     setupUI()
