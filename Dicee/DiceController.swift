@@ -10,25 +10,24 @@ import SwiftUI
 class DiceController: UIViewController {
   
   let greenView: UIImageView = {
-    let image = UIImageView(image: UIImage(named: "GreenBackground"))
-    image.contentMode = .scaleAspectFill
-    return image
-  }()
+    $0.image = UIImage(named: "GreenBackground")
+    $0.contentMode = .scaleAspectFill
+    return $0
+  }(UIImageView())
 
   let diceImageView1 = UIImageView(image: #imageLiteral(resourceName: "DiceOne"))
   
   let diceImageView2 = UIImageView(image: #imageLiteral(resourceName: "DiceOne"))
   
   let rollButton: UIButton = {
-    let button = UIButton(type: .system)
-    button.setTitle("Roll", for: .normal)
-    button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
-    button.backgroundColor = #colorLiteral(red: 0.6078431373, green: 0.1098039216, blue: 0.1215686275, alpha: 1) // 9B1C1F
-    button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 40, bottom: 10, right: 40)
-    button.layer.cornerRadius = 20
-    button.addTarget(nil, action: #selector(rollButtonPressed), for: .touchUpInside)
-    return button
-  }()
+    $0.setTitle("Roll", for: .normal)
+    $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
+    $0.backgroundColor = #colorLiteral(red: 0.6078431373, green: 0.1098039216, blue: 0.1215686275, alpha: 1) // 9B1C1F
+    $0.contentEdgeInsets = UIEdgeInsets(top: 10, left: 40, bottom: 10, right: 40)
+    $0.layer.cornerRadius = 20
+    $0.addTarget(nil, action: #selector(rollButtonPressed), for: .touchUpInside)
+    return $0
+  }(UIButton(type: .system))
   
   let dices = [#imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix")]
 
