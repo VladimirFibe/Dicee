@@ -12,6 +12,7 @@ class DiceController: UIViewController {
   let greenView: UIImageView = {
     $0.image = UIImage(named: "GreenBackground")
     $0.contentMode = .scaleAspectFill
+    $0.translatesAutoresizingMaskIntoConstraints = false
     return $0
   }(UIImageView())
 
@@ -51,11 +52,12 @@ class DiceController: UIViewController {
   
   func setupUI() {
     view.addSubview(greenView)
-    greenView.translatesAutoresizingMaskIntoConstraints = false
-    greenView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-    greenView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-    greenView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-    greenView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+    NSLayoutConstraint.activate([
+      greenView.topAnchor.constraint(equalTo: view.topAnchor),
+      greenView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+      greenView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      greenView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+    ])
 
     let diceStack = UIStackView(arrangedSubviews: [diceImageView1, diceImageView2])
     diceStack.axis = .horizontal
@@ -68,10 +70,12 @@ class DiceController: UIViewController {
     stack.alignment = .center
     stack.distribution = .fill
     stack.spacing = 70
-    view.addSubview(stack)
     stack.translatesAutoresizingMaskIntoConstraints = false
-    stack.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-    stack.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    view.addSubview(stack)
+    NSLayoutConstraint.activate([
+      stack.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+      stack.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+    ])
   }
 }
 
