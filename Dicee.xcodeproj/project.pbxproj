@@ -12,8 +12,8 @@
 		1F27FDAD279D8EBE0063099E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F27FDAB279D8EBE0063099E /* LaunchScreen.storyboard */; };
 		1F57A31627AD68D100E6617C /* DiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F57A31527AD68D100E6617C /* DiceController.swift */; };
 		E9E187EE287A4BA600142233 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E9E187ED287A4BA600142233 /* README.md */; };
-		E9E187F0287A4BC400142233 /* SUI.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E187EF287A4BC400142233 /* SUI.png */; };
 		E9E187F2287A4C9E00142233 /* readme-end-banner.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E187F1287A4C9E00142233 /* readme-end-banner.png */; };
+		E9E187F4287A4D2C00142233 /* SUI.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E187F3287A4D2C00142233 /* SUI.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +24,8 @@
 		1F27FDAE279D8EBE0063099E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F57A31527AD68D100E6617C /* DiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceController.swift; sourceTree = "<group>"; };
 		E9E187ED287A4BA600142233 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		E9E187EF287A4BC400142233 /* SUI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SUI.png; sourceTree = "<group>"; };
 		E9E187F1287A4C9E00142233 /* readme-end-banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "readme-end-banner.png"; sourceTree = "<group>"; };
+		E9E187F3287A4D2C00142233 /* SUI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SUI.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 		E9E187EC287A4B8300142233 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				E9E187EF287A4BC400142233 /* SUI.png */,
+				E9E187F3287A4D2C00142233 /* SUI.png */,
 				E9E187F1287A4C9E00142233 /* readme-end-banner.png */,
 			);
 			path = Assets;
@@ -137,10 +137,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9E187EE287A4BA600142233 /* README.md in Resources */,
+				E9E187F4287A4D2C00142233 /* SUI.png in Resources */,
 				1F27FDAD279D8EBE0063099E /* LaunchScreen.storyboard in Resources */,
 				E9E187F2287A4C9E00142233 /* readme-end-banner.png in Resources */,
 				1F27FDAA279D8EBE0063099E /* Assets.xcassets in Resources */,
-				E9E187F0287A4BC400142233 /* SUI.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
