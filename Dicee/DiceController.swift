@@ -10,11 +10,10 @@ import SwiftUI
 class DiceController: UIViewController {
   
   let greenView: UIImageView = {
-    $0.image = UIImage(named: "GreenBackground")
     $0.contentMode = .scaleAspectFill
     $0.translatesAutoresizingMaskIntoConstraints = false
     return $0
-  }(UIImageView())
+  }(UIImageView(image: UIImage(named: "GreenBackground")))
 
   let diceImageView1 = UIImageView(image: #imageLiteral(resourceName: "DiceOne"))
   
@@ -26,7 +25,7 @@ class DiceController: UIViewController {
     $0.backgroundColor = #colorLiteral(red: 0.6078431373, green: 0.1098039216, blue: 0.1215686275, alpha: 1) // 9B1C1F
     $0.contentEdgeInsets = UIEdgeInsets(top: 10, left: 40, bottom: 10, right: 40)
     $0.layer.cornerRadius = 20
-    $0.addTarget(nil, action: #selector(rollButtonPressed), for: .touchUpInside)
+    $0.addTarget(nil, action: #selector(rollButtonPressed), for: .primaryActionTriggered)
     return $0
   }(UIButton(type: .system))
   
@@ -52,13 +51,6 @@ class DiceController: UIViewController {
   
   func setupUI() {
     view.addSubview(greenView)
-    NSLayoutConstraint.activate([
-      greenView.topAnchor.constraint(equalTo: view.topAnchor),
-      greenView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-      greenView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-      greenView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-    ])
-
     let diceStack = UIStackView(arrangedSubviews: [diceImageView1, diceImageView2])
     diceStack.axis = .horizontal
     diceStack.alignment = .fill
@@ -73,6 +65,11 @@ class DiceController: UIViewController {
     stack.translatesAutoresizingMaskIntoConstraints = false
     view.addSubview(stack)
     NSLayoutConstraint.activate([
+      greenView.topAnchor.constraint(equalTo: view.topAnchor),
+      greenView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+      greenView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      greenView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+
       stack.centerYAnchor.constraint(equalTo: view.centerYAnchor),
       stack.centerXAnchor.constraint(equalTo: view.centerXAnchor)
     ])
@@ -88,7 +85,6 @@ struct SwiftUIController: UIViewControllerRepresentable {
   }
   
   func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-    
   }
 }
 
