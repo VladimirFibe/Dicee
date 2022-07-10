@@ -15,17 +15,22 @@ class DiceController: UIViewController {
     return $0
   }(UIImageView(image: UIImage(named: "GreenBackground")))
 
+  let logoView: UIImageView = {
+    $0.contentMode = .scaleAspectFill
+    return $0
+  }(UIImageView(image: UIImage(named: "diceeLogo")))
+  
   let diceImageView1 = UIImageView(image: #imageLiteral(resourceName: "DiceOne"))
   
   let diceImageView2 = UIImageView(image: #imageLiteral(resourceName: "DiceOne"))
   
-  let rollButton: UIButton = {
+  lazy var rollButton: UIButton = {
     $0.setTitle("Roll", for: .normal)
     $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
     $0.backgroundColor = #colorLiteral(red: 0.6078431373, green: 0.1098039216, blue: 0.1215686275, alpha: 1) // 9B1C1F
     $0.contentEdgeInsets = UIEdgeInsets(top: 10, left: 40, bottom: 10, right: 40)
     $0.layer.cornerRadius = 20
-    $0.addTarget(nil, action: #selector(rollButtonPressed), for: .primaryActionTriggered)
+    $0.addTarget(self, action: #selector(rollButtonPressed), for: .primaryActionTriggered)
     return $0
   }(UIButton(type: .system))
   
@@ -57,11 +62,10 @@ class DiceController: UIViewController {
     diceStack.distribution = .fill
     diceStack.spacing = 50
     
-    let stack = UIStackView(arrangedSubviews: [diceStack, rollButton])
+    let stack = UIStackView(arrangedSubviews: [logoView, diceStack, rollButton])
     stack.axis = .vertical
     stack.alignment = .center
-    stack.distribution = .fill
-    stack.spacing = 70
+    stack.distribution = .equalSpacing
     stack.translatesAutoresizingMaskIntoConstraints = false
     view.addSubview(stack)
     NSLayoutConstraint.activate([
@@ -70,7 +74,8 @@ class DiceController: UIViewController {
       greenView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       greenView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
 
-      stack.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+      stack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
+      stack.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -100),
       stack.centerXAnchor.constraint(equalTo: view.centerXAnchor)
     ])
   }
