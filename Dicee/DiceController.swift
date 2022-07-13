@@ -23,7 +23,7 @@ class DiceController: UIViewController {
   let diceImageView1 = UIImageView(image: #imageLiteral(resourceName: "DiceOne"))
   
   let diceImageView2 = UIImageView(image: #imageLiteral(resourceName: "DiceOne"))
-  
+  lazy var diceStack = UIStackView(arrangedSubviews: [diceImageView1, diceImageView2])
   lazy var rollButton: UIButton = {
     $0.setTitle("Roll", for: .normal)
     $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
@@ -44,8 +44,11 @@ class DiceController: UIViewController {
   }
   
   @objc func rollButtonPressed() {
-    diceImageView1.image = dices.randomElement()
-    diceImageView2.image = dices[Int.random(in: 0...5)]
+    diceStack.shake()
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+      self.diceImageView1.image = self.dices.randomElement()
+      self.diceImageView2.image = self.dices[Int.random(in: 0...5)]
+    }
   }
   
   override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
@@ -56,7 +59,7 @@ class DiceController: UIViewController {
   
   func setupUI() {
     view.addSubview(greenView)
-    let diceStack = UIStackView(arrangedSubviews: [diceImageView1, diceImageView2])
+    
     diceStack.axis = .horizontal
     diceStack.alignment = .fill
     diceStack.distribution = .fill
@@ -78,6 +81,18 @@ class DiceController: UIViewController {
       stack.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -100),
       stack.centerXAnchor.constraint(equalTo: view.centerXAnchor)
     ])
+  }
+}
+
+extension UIView {
+  func shake() {
+    let animation = CABasicAnimation(keyPath: "position")
+    animation.repeatCount = 3
+    animation.duration = 0.075
+    animation.autoreverses = true
+    animation.fromValue = NSValue(cgPoint: CGPoint(x: self.center.x - 10, y: self.center.y))
+    animation.toValue = NSValue(cgPoint: CGPoint(x: self.center.x + 10, y: self.center.y))
+    layer.add(animation, forKey: "position")
   }
 }
 
