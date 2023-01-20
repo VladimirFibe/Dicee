@@ -1,6 +1,19 @@
+# Dicee
+
+Идея - на начальном view делаем еще одну кнопку, которая ведет на новый экран. 
+На новом экране - 5 пунктов, напротив которых появляется соотвествующая цифра. 
+
+Пункты такие
+1. Количество бросков
+2. Макс Сумма броска
+3. Мин сумма броска
+4. Следующая сумма броска 
+5. Одинаковые кости 
+
+![image](https://github.com/VladimirFibe/Dicee/blob/main/Assets/1.jpg)
+
 ![Banner](Assets/SUI.png)
 
-# Dicee
 
 ## Our Goal
 
@@ -22,18 +35,6 @@ We’re going to make a Las Vegas dice app. You can make the die roll at the pre
 * Understand and use collection types such as Swift arrays.
 * Test and debug your app with the Xcode console.
 * Learn about randomisation and how to generate random numbers in Swift.
-
-Идея - на начальном view делаем еще одну кнопку, которая ведет на новый экран. 
-На новом экране - 5 пунктов, напротив которых появляется соотвествующая цифра. 
-
-Пункты такие
-1. Количество бросков
-2. Макс Сумма броска
-3. Мин сумма броска
-4. Следующая сумма броска 
-5. Одинаковые кости 
-
-![image](https://github.com/VladimirFibe/Dicee/blob/main/Assets/1.jpg)
 
 >This is a companion project to The App Brewery's Complete App Development Bootcamp, check out the full course at [www.appbrewery.co](https://www.appbrewery.co/)
 
