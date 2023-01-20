@@ -33,7 +33,7 @@ We’re going to make a Las Vegas dice app. You can make the die roll at the pre
 4. Следующая сумма броска 
 5. Одинаковые кости 
 
-[image]()
+[image](https://github.com/VladimirFibe/Dicee/blob/main/Assets/1.jpg)
 
 >This is a companion project to The App Brewery's Complete App Development Bootcamp, check out the full course at [www.appbrewery.co](https://www.appbrewery.co/)
 
